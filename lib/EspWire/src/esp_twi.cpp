@@ -156,7 +156,9 @@ static unsigned int esp_twi_getDelay(unsigned int freq){
 }
 
 void esp_twi_setClock(unsigned int freq){
-  esp_twi_dcount = esp_twi_getDelay(freq);
+  (void)freq;
+  // Жестко задаем задержку для 400 кГц (значение 27 для 240 МГц)
+  esp_twi_dcount = 27; 
 }
 
 void esp_twi_setClockStretchLimit(uint32_t limit){
