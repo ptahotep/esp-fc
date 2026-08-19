@@ -52,7 +52,7 @@ void EspTwoWire::begin(int sda, int scl, uint32_t frequency){
   default_sda_pin = sda;
   default_scl_pin = scl;
   esp_twi_init(sda, scl);
-  if(frequency) setClock(frequency);
+  esp_twi_setClock(400000); // Жестко ставим 400 кГц вместо 800 кГц
   flush();
 }
 
