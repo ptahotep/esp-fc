@@ -47,13 +47,13 @@
 #define ESPFC_SERIAL_REMAP_PINS
 #define ESPFC_SERIAL_DEBUG_PORT SERIAL_UART_0
 
-#define ESPFC_SPI_0
-#define ESPFC_SPI_0_DEV SPI1
-#define ESPFC_SPI_0_SCK 18
-#define ESPFC_SPI_0_MOSI 23
-#define ESPFC_SPI_0_MISO 19
+// #define ESPFC_SPI_0
+// #define ESPFC_SPI_0_DEV SPI1
+// #define ESPFC_SPI_0_SCK 18
+// #define ESPFC_SPI_0_MOSI 23
+// #define ESPFC_SPI_0_MISO 19
 
-#define ESPFC_SPI_CS_GYRO 5
+// #define ESPFC_SPI_CS_GYRO 5 <-- Отключили SPI гироскопа, чтобы esp-fc не искал его на SPI
 #define ESPFC_SPI_CS_BARO 13
 
 #define ESPFC_I2C_0
@@ -61,6 +61,10 @@
 #define ESPFC_I2C_0_SDA 21
 #define ESPFC_I2C_0_SPEED 400000
 // #define ESPFC_I2C_0_SOFT
+
+// Явно задаем MPU6050 по I2C
+#define ESPFC_GYRO_DEV MPU6050
+#define ESPFC_GYRO_ADDRESS 0x68
 
 #define ESPFC_BUZZER_PIN 26
 #define ESPFC_BUTTON_PIN 0
@@ -76,7 +80,7 @@
 
 #define ESPFC_FEATURE_MASK (FEATURE_RX_SERIAL | FEATURE_DYNAMIC_FILTER)
 
-#define ESPFC_GYRO_I2C_RATE_MAX 2000
+#define ESPFC_GYRO_I2C_RATE_MAX 1000
 #define ESPFC_GYRO_SPI_RATE_MAX 4000
 
 #define ESPFC_DSHOT_TELEMETRY
