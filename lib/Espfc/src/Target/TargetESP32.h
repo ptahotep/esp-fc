@@ -59,6 +59,7 @@
 #define ESPFC_I2C_0
 #define ESPFC_I2C_0_SCL 22
 #define ESPFC_I2C_0_SDA 21
+#define ESPFC_I2C_0_SPEED 400000
 // #define ESPFC_I2C_0_SOFT
 
 #define ESPFC_BUZZER_PIN 26
