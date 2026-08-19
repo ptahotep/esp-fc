@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: esp32c3-firmware
-          path: .pio/build/esp32c3/firmware.bin
+          path: .pio/build/esp32c3/*.bin
