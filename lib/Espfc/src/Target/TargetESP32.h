@@ -59,7 +59,10 @@
 #define ESPFC_I2C_0
 #define ESPFC_I2C_0_SCL 22
 #define ESPFC_I2C_0_SDA 21
+#undef ESPFC_I2C_0_SPEED
 #define ESPFC_I2C_0_SPEED 400000
+#undef ESPFC_I2C_CLOCK
+#define ESPFC_I2C_CLOCK 400000
 // #define ESPFC_I2C_0_SOFT
 
 // Явно задаем MPU6050 по I2C
