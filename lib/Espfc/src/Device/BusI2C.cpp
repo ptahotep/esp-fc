@@ -18,10 +18,8 @@ int BusI2C::begin(int sda, int scl, uint32_t speed)
 {
   if (sda == -1 || scl == -1) return 0;
 
-  // Если передано больше 400 кГц (например 800000), урезаем до 400000
-  if (speed > 400000) {
-    speed = 400000;
-  }
+  // Принудительно ставим 100 кГц для проверки
+  speed = 100000;
 
   targetI2CInit(_dev, sda, scl, speed);
 
