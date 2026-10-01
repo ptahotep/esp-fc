@@ -31,14 +31,14 @@
 #define ESPFC_SERIAL_1_BAUD (SERIAL_SPEED_115200)
 #define ESPFC_SERIAL_1_BBAUD (SERIAL_SPEED_NONE)
 
-// Настройка Serial 2 под CRSF на 420000 бод
+// Назначаем SERIAL_2 под Serial RX на стандартной константе
 #define ESPFC_SERIAL_2
 #define ESPFC_SERIAL_2_DEV Serial2
 #define ESPFC_SERIAL_2_DEV_T HardwareSerial
 #define ESPFC_SERIAL_2_TX 17
 #define ESPFC_SERIAL_2_RX 16
 #define ESPFC_SERIAL_2_FN (SERIAL_FUNCTION_RX_SERIAL)
-#define ESPFC_SERIAL_2_BAUD 420000
+#define ESPFC_SERIAL_2_BAUD (SERIAL_SPEED_115200)
 #define ESPFC_SERIAL_2_BBAUD (SERIAL_SPEED_NONE)
 
 #define ESPFC_SERIAL_SOFT_0
@@ -73,7 +73,7 @@
 
 #define ESPFC_ADC_SCALE (3.3f / 4096)
 
-// Принудительно включаем CRSF и отключаем SBUS
+// Принудительно отключаем SBUS и компилируем драйвер CRSF
 #undef USE_RX_SBUS
 #define USE_RX_CRSF
 #define USE_TELEMETRY_CRSF
