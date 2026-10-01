@@ -406,7 +406,7 @@ struct InputChannelConfig
 struct InputConfig
 {
   int8_t ppmMode = PPM_MODE_NORMAL;
-  uint8_t serialRxProvider = SERIALRX_SBUS;
+  uint8_t serialRxProvider = SERIALRX_CRSF;
 
   int16_t minCheck = 1050;
   int16_t maxCheck = 1900;
